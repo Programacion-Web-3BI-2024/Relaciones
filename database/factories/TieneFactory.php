@@ -3,9 +3,8 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 
-class PizzaFactory extends Factory
+class TieneFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -15,9 +14,8 @@ class PizzaFactory extends Factory
     public function definition()
     {
         return [
-            "nombre" => Str::random(10),
-            "precio" => rand(1,1000),
-            "chef_id" => rand(1,4)
+            "pizza_id" => rand(1,10),
+            "ingrediente_id" => rand(1,20)
         ];
     }
 }

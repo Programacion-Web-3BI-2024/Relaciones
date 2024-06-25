@@ -7,13 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 
-class Chef extends Model
+class Tiene extends Model
 {
     use HasFactory;
     use SoftDeletes;
 
-    // Relacion 1 a N con totalidad
-    public function pizzas(){
-        return $this -> hasMany(Pizza::class);
-    }
+    protected $table = "tiene";
+
+
 }
